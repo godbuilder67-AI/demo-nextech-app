@@ -6,27 +6,38 @@
     <title>Job Posting</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Times New Roman", serif;
         margin: 20px;
+        background-color: rgb(119, 142, 255);
+        animation: myAnimation 3s;
       }
-      h1 {
-        color: #333;
+      img {
+        max-width: 100%;
+        height: auto;
       }
-      h3 {
-        text-transform: uppercase;
+      h1,
+      h3,
+      p {
+        color: #000000;
       }
       p {
-        line-height: 1.5 em;
+        line-height: 1.5em;
       }
       a:hover {
-        background-color: yellow;
+        background-color: rgb(94, 255, 0);
+      }
+      @keyframes myAnimation {
+        0% { background-color: rgb(179, 111, 201); }
+        100% { background-color: rgb(119, 142, 255); }
       }
     </style>
   </head>
   <body>
-    <h1>[Enter Job Title]</h1>
+    <h1>Data scientist</h1>
+    <img src="https://www.cio.com/article/230532/what-is-a-data-scientist-a-key-data-analytics-role-and-a-lucrative-career.html" alt="Data Scientist" />
     <h3>Description</h3>
-    <p>[Enter the Job Description]</p>
-    <a href="">Link to Job Posting</a>
+    <p>A data scientist is an analytical expert who extracts actionable insights from complex datasets. They combine statistical modeling, machine learning, and programming skills to solve business problems and guide strategic decision-making</p>
+    <a href="https://www.indeed.com/viewjob?jk=0a680d47fe21434d&from=shareddesktop_copy">Link to Indeed Job Posting</a>
+    <p> Made by Aiden W, hope you enjoyy</p>
   </body>
 </html>
