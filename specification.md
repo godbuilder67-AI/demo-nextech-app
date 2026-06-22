@@ -1,13 +1,13 @@
-# Specification: [Your App Idea Name]
+# Specification: [Planet look up]
 
-App description: [Write a one or two sentences describing what your app does and who it’s for.]
+An app that will show you planets and give you their general info like date discoverd, what kind of planet, and even how likly it could support life and more genral info
 
 ## Style and Theme
 
-[Describe the look and feel of your app.] 
+Its going to be space themed using dark/cool colors 
 
 Overall mood:
-Examples: fun and playful, calm and professional, bold and energetic, etc.
+Bold and dark with space themed icons and shooting stars in the background
 
 Use the *style-guide.html* for details on styling -- fonts, colors, and layout.
 
@@ -15,13 +15,13 @@ Use the *style-guide.html* for details on styling -- fonts, colors, and layout.
 
 ### Story 1 (most important)
 
-[Write 1-2 sentences. Who is using the app, what do they want to do, and what do they see when it works? Write it like you are describing it to a friend.]
+An app that will show you planets and give you their general info like date discoverd, what kind of planet, and even how likly it could support life
 
 ---
 
 ## Requirements
 
-Write clear statements about what the app must do.
+Let people look for diffrent planets and click a button to get more info
 
 ### Functional Requirements
 
