@@ -61,7 +61,7 @@ Describe what success looks like in simple, observable terms.
 
 ### Starter defaults
 
-The template starts with Bootstrap default styling (light background, blue primary, simple cards). You only need to describe the changes you want.
+The template starts with Bootstrap default styling (light background, blue primary, simple cards)
 
 ## Assumptions
 

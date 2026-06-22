@@ -1,3 +1,45 @@
+/* Space Theme Styling */
+body {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a0033 100%);
+  color: #e0e0e0;
+}
+
+.container, .card, section {
+  background-color: rgba(20, 20, 40, 0.8);
+  color: #e0e0e0;
+}
+
+.card {
+  border: 1px solid #404060;
+  background-color: rgba(25, 25, 50, 0.9);
+}
+
+.btn-primary, .btn-outline-primary {
+  background-color: #000000;
+  border-color: #626262;
+  color: #ffffff;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+  background-color: #626262;
+  border-color: #626262;
+  color: #ffffff;
+}
+
+.navbar {
+  background-color: rgba(15, 15, 35, 0.95) !important;
+  border-bottom-color: #404060 !important;
+  color: #e0e0e0;
+}
+
+.navbar-brand {
+  color: #e0e0e0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #c4c4c4;
+}
+
 .collection-card-image {
   height: 180px;
 }
