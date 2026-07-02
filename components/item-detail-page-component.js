@@ -8,9 +8,18 @@ export default {
       return itemsStore.items.find((item) => item.id === route.params.id);
     });
 
+    const wikipediaUrl = Vue.computed(() => {
+      const item = selectedItem.value;
+      if (!item) return '';
+
+      const name = encodeURIComponent(item.name || item.id || '');
+      return `https://en.wikipedia.org/wiki/${name}`;
+    });
+
     return {
       itemsStore,
       selectedItem,
+      wikipediaUrl,
     };
   },
   template: /* html */ `
@@ -50,6 +59,17 @@ export default {
           <p class="lead mb-3">{{ selectedItem.description || 'No description available.' }}</p>
           <p class="mb-0"><strong>Location:</strong> {{ selectedItem.location || 'N/A' }}</p>
           <p class="text-muted mt-2 mb-0"><strong>Item ID:</strong> {{ selectedItem.id }}</p>
+
+          <div class="mt-4 pt-3 border-top">
+            <a
+              v-if="wikipediaUrl"
+              :href="wikipediaUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline-light btn-sm">
+              Read more on Wikipedia
+            </a>
+          </div>
         </div>
       </article>
     </section>
