@@ -1,12 +1,119 @@
 /* Space Theme Styling */
 body {
-  background: linear-gradient(135deg, #0a0e27 0%, #1a0033 100%);
+  margin: 0;
+  min-height: 100vh;
   color: #e0e0e0;
+  background: #020617;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.95) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255,255,255,0.7) 1px, transparent 1px),
+    radial-gradient(circle, rgba(125,211,252,0.35) 1px, transparent 1px);
+  background-size: 180px 180px, 260px 260px, 320px 320px;
+  background-position: 0 0, 80px 120px, 40px 80px;
+  animation: starMove 24s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.28), transparent 28%),
+              radial-gradient(circle at 80% 10%, rgba(192, 132, 252, 0.25), transparent 30%),
+              radial-gradient(circle at 50% 100%, rgba(34, 211, 238, 0.22), transparent 34%);
+  filter: blur(16px);
+  pointer-events: none;
+  z-index: 0;
+  animation: glowPulse 8s ease-in-out infinite alternate;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes starMove {
+  from { transform: translateY(0px) translateX(0px); }
+  to { transform: translateY(-220px) translateX(120px); }
+}
+
+@keyframes glowPulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.06); opacity: 1; }
+}
+
+.flying-star {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: radial-gradient(circle, rgba(255,255,255,1), rgba(255,255,255,0.5));
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 2px rgba(255,255,255,0.8));
+}
+
+.flying-star.large {
+  width: 4px;
+  height: 4px;
+  filter: drop-shadow(0 0 4px rgba(125,211,252,0.9));
+}
+
+.flying-star.colored {
+  background: radial-gradient(circle, rgba(125,211,252,1), rgba(125,211,252,0.5));
+}
+
+.btn, .btn-link {
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn::before, .btn-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.28) 45%, transparent 60%);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.btn > *, .btn-link > * {
+  position: relative;
+  z-index: 1;
+}
+
+.btn:hover, .btn-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.22);
+}
+
+.btn:hover::before, .btn-link:hover::before {
+  transform: translateX(120%);
+}
+
+.btn:focus-visible, .btn-link:focus-visible {
+  outline: 2px solid #8cdcff;
+  outline-offset: 2px;
 }
 
 .container, .card, section {
-  background-color: rgba(20, 20, 40, 0.8);
+  background-color: rgba(20, 20, 40, 0.82);
   color: #e0e0e0;
+  backdrop-filter: blur(4px);
 }
 
 .card {
@@ -30,6 +137,7 @@ body {
   background-color: rgba(15, 15, 35, 0.95) !important;
   border-bottom-color: #404060 !important;
   color: #e0e0e0;
+  backdrop-filter: blur(6px);
 }
 
 .navbar-brand {

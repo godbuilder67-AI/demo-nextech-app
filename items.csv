@@ -1,11 +1,11 @@
 id,name,description,image_url
 earth,Earth,Earth is the third planet from the Sun and the only astronomical body known to harbor life,assets/earth.png
 saturn,Saturn,"Saturn is the sixth planet from the Sun and the second-largest in our solar system. Famous for its spectacular, complex ring system, it is a massive gas giant primarily composed of hydrogen and helium that famously possesses a density lower than that of water",assets/saturn.png
-mercury,Mercury,"Mercury can refer to either the smallest planet in our solar system or the heavy, silvery-white liquid metal element",assets/revstar-mercury.png
-venus,Venus,"Venus is the second planet from the Sun and our closest planetary neighbor. Often called Earth's ""twin,""",assets/revstar-venus.png
-mars,Mars,"Mars, the fourth planet from the Sun, is a cold, dry, and dusty desert world known as the ""Red Planet""",assets/revstar-mars.png
-jupiter,Jupiter,"Jupiter is the fifth planet from the Sun and the largest in our solar system, containing more than twice the mass of all other planets combined. As a gas giant, it lacks a solid surface and is primarily composed of hydrogen and helium gases surrounding a dense, fuzzy core.",assets/tele-jupiter.png
-uranus,Uranus,"Uranus is the seventh planet from the Sun and the third-largest in our solar system. Classified as an ""ice giant,"" it is distinguished by its unique cyan color, extreme cold, and extreme axial tilt that causes the planet to spin completely on its side",assets/tele-uranus.png
-neptune,Neptune,"Neptune, the eighth and most distant planet from the Sun, is a frigid, windy ice giant. Orbiting over 30 times farther from the Sun than Earth, it is best known for its striking sapphire hue and supersonic weather. It is the only major planet invisible to the naked eye",assets/tele-neptune.png
-toi-3757-b,TOI-3757 b,TOI-3757 b is a Jupiter-sized exoplanet orbiting a cool red dwarf star 580 light-years away in the Auriga constellation,assets/tele-toi-3757-b.jpg
-ogle-2016-blg-1927,OGLE-2016-BLG-1928,"OGLE-2016-BLG-1928 is an interstellar ""rogue"" planet drifting freely through the Milky Way without orbiting a host star.",assets/tele-ogle-2016-blg-1927.png
+mercury,Mercury,"Mercury can refer to either the smallest planet in our solar system or the heavy, silvery-white liquid metal element",assets/mercury.png
+venus,Venus,"Venus is the second planet from the Sun and our closest planetary neighbor. Often called Earth's ""twin,""",assets/venus.png
+mars,Mars,"Mars, the fourth planet from the Sun, is a cold, dry, and dusty desert world known as the ""Red Planet""",assets/mars.png
+jupiter,Jupiter,"Jupiter is the fifth planet from the Sun and the largest in our solar system, containing more than twice the mass of all other planets combined. As a gas giant, it lacks a solid surface and is primarily composed of hydrogen and helium gases surrounding a dense, fuzzy core.",assets/jupiter.png
+uranus,Uranus,"Uranus is the seventh planet from the Sun and the third-largest in our solar system. Classified as an ""ice giant,"" it is distinguished by its unique cyan color, extreme cold, and extreme axial tilt that causes the planet to spin completely on its side",assets/uranus.png
+neptune,Neptune,"Neptune, the eighth and most distant planet from the Sun, is a frigid, windy ice giant. Orbiting over 30 times farther from the Sun than Earth, it is best known for its striking sapphire hue and supersonic weather. It is the only major planet invisible to the naked eye",assets/neptune.png
+toi-3757-b,TOI-3757 b,TOI-3757 b is a Jupiter-sized exoplanet orbiting a cool red dwarf star 580 light-years away in the Auriga constellation,assets/toi-3757-b.png
+ogle-2016-blg-1927,OGLE-2016-BLG-1928,"OGLE-2016-BLG-1928 is an interstellar ""rogue"" planet drifting freely through the Milky Way without orbiting a host star.",assets/ogle-2016-blg-1927.png
