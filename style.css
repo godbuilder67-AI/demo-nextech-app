@@ -1,4 +1,8 @@
 /* Space Theme Styling */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -42,6 +46,31 @@ body::after {
   z-index: 1;
 }
 
+main {
+  position: relative;
+}
+
+router-view {
+  display: block;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-enter-to,
+.page-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @keyframes starMove {
   from { transform: translateY(0px) translateX(0px); }
   to { transform: translateY(-220px) translateX(120px); }
@@ -74,11 +103,27 @@ body::after {
 }
 
 .btn, .btn-link {
-
   position: relative;
   overflow: hidden;
   isolation: isolate;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.card,
+.portal-panel,
+.container {
+  animation: fadeInUp 0.35s ease both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .btn::before, .btn-link::before {

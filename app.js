@@ -26,6 +26,35 @@ const routes = [
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0, behavior: 'smooth' };
+  },
+});
+
+function resolveAssetUrl(value) {
+  const trimmedValue = String(value || '').trim();
+  if (!trimmedValue) {
+    return '';
+  }
+
+  const normalizedValue = trimmedValue.replace(/^\.\//, '');
+
+  try {
+    return new URL(normalizedValue, window.location.href).href;
+  } catch {
+    return normalizedValue;
+  }
+}
+
+router.beforeEach((to, from, next) => {
+  document.body.classList.add('page-transition');
+  next();
+});
+
+router.afterEach(() => {
+  window.setTimeout(() => {
+    document.body.classList.remove('page-transition');
+  }, 250);
 });
 
 const app = Vue.createApp({
@@ -54,16 +83,7 @@ const app = Vue.createApp({
             } else {
               itemsStore.items = data.map((row) => {
                 const rawImage = String(row.image_url || '').trim();
-                let imageUrl = rawImage;
-                if (imageUrl) {
-                  // If the CSV contains a relative path like "assets/img.png",
-                  // make it root-relative so it resolves correctly from any route.
-                  if (!/^https?:\/\//i.test(imageUrl) && !imageUrl.startsWith('/')) {
-                    imageUrl = '/' + imageUrl.replace(/^\.\//, '');
-                  }
-                } else {
-                  imageUrl = '';
-                }
+                const imageUrl = rawImage ? resolveAssetUrl(rawImage) : '';
 
                 return {
                   id: String(row.id || '').trim(),

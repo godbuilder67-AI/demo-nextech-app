@@ -7,3 +7,8 @@ jupiter,Jupiter,The largest planet with a Great Red Spot storm. Discovered in an
 saturn,Saturn,Famous for its beautiful ring system. Discovered in ancient times. Type: Gas Giant. Cannot support life on its surface.,Gas Giant,https://picsum.photos/seed/planet-saturn/800/600,1.4 billion km from Sun
 uranus,Uranus,An ice giant that rotates on its side. Discovered: 1781. Type: Ice Giant. Cannot support life in its harsh environment.,Ice Giant,https://picsum.photos/seed/planet-uranus/800/600,2.9 billion km from Sun
 neptune,Neptune,The windiest planet with deep blue color. Discovered: 1846. Type: Ice Giant. Cannot support life due to extreme pressure and cold.,Ice Giant,https://picsum.photos/seed/planet-neptune/800/600,4.5 billion km from Sun
+pluto,Pluto,A distant dwarf planet in the Kuiper Belt with a bright icy surface and a complex system of moons. Type: Dwarf Planet. Not likely to support life as we know it.,Dwarf Planet,assets/pluto.jpg,Kuiper Belt
+ceres,Ceres,The largest object in the asteroid belt between Mars and Jupiter. Type: Dwarf Planet. Icy and rocky with a mysterious surface.,Dwarf Planet,assets/ceres.jpg,Asteroid Belt
+haumea,Haumea,A fast-spinning dwarf planet in the Kuiper Belt with an elongated shape and a bright icy surface. Type: Dwarf Planet. Extremely cold and unlikely to support life.,Dwarf Planet,assets/haumea.jpg,Kuiper Belt
+makemake,Makemake,A distant dwarf planet in the Kuiper Belt known for its reddish color and sparse surface. Type: Dwarf Planet. Too cold for life as we know it.,Dwarf Planet,assets/makemake.jpg,Kuiper Belt
+eris,Eris,One of the most distant dwarf planets in the scattered disc with a highly reflective surface. Type: Dwarf Planet. Very cold and isolated from the Sun.,Dwarf Planet,assets/eris.jpg,Scattered Disc
