@@ -1,5 +1,7 @@
 import LandingPageComponent from './components/landing-page-component.js';
 import AboutPageComponent from './components/about-page-component.js';
+import DataDisclaimerComponent from './components/data-disclaimer-component.js';
+import ContactPageComponent from './components/contact-page-component.js';
 import NavbarComponent from './components/navbar-component.js';
 import CollectionPageComponent from './components/collection-page-component.js';
 import ItemDetailPageComponent from './components/item-detail-page-component.js';
@@ -12,6 +14,14 @@ const routes = [
   {
     path: '/about',
     component: AboutPageComponent,
+  },
+  {
+    path: '/data-disclaimer',
+    component: DataDisclaimerComponent,
+  },
+  {
+    path: '/contact',
+    component: ContactPageComponent,
   },
   {
     path: '/items',
@@ -51,7 +61,32 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-router.afterEach(() => {
+function updateRowenVisibilityForPath(path) {
+  try {
+    const widget = document.getElementById('rowen-gpt-widget');
+    const panel = document.getElementById('rowen-gpt-panel');
+    const toggle = document.getElementById('rowen-gpt-toggle');
+    const isDetail = /^\/items\/[^/]+$/.test(path);
+
+    if (!widget) return;
+
+    if (isDetail) {
+      widget.style.display = '';
+      widget.setAttribute('aria-hidden', 'false');
+    } else {
+      widget.style.display = 'none';
+      widget.setAttribute('aria-hidden', 'true');
+      if (panel) panel.classList.remove('is-open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    }
+  } catch (e) {
+    // ignore
+  }
+}
+
+router.afterEach((to) => {
+  updateRowenVisibilityForPath(to.path || '');
+
   window.setTimeout(() => {
     document.body.classList.remove('page-transition');
   }, 250);
@@ -121,6 +156,12 @@ app.component('navbar-component', NavbarComponent);
 
 app.use(router);
 app.mount('#app');
+// Ensure the Rowen-GPT widget visibility matches the initial route
+try {
+  updateRowenVisibilityForPath(router.currentRoute.value.path || '');
+} catch (e) {
+  // ignore if function not available
+}
 
 const chatToggle = document.getElementById('rowen-gpt-toggle');
 const chatPanel = document.getElementById('rowen-gpt-panel');
@@ -198,23 +239,16 @@ if (chatToggle && chatPanel) {
       'I dont know, I just know a lot of nothing about space.',
       'I\'m not quite sure.',
       'Maybe the real answer is inside you.',
-      'Maybe you should ask the real Rowen.'
+      'Maybe you should ask the real Rowen.',
+      'Give it your rec room best',
+      'The cake is a lie',
+      'meow',
+      'Google exists for a reason',
+      'Thats a solid maybe',
+      ''
     ];
 
     const topicReplies = [];
-
-    if (lower.includes('planet')) {
-      topicReplies.push('Planet facts are my favorite. I’d say the best one is the one you explore next.');
-    }
-
-    if (lower.includes('star')) {
-      topicReplies.push('Stars sparkle because they shine with their own light. Very dramatic, very cool.');
-    }
-
-    if (lower.includes('idea')) {
-      topicReplies.push('That sounds like a brilliant space mission. I’d start with one tiny step.');
-    }
-
     const replyPool = topicReplies.length > 0 ? topicReplies : replies;
 
     let randomIndex = Math.floor(Math.random() * replyPool.length);
@@ -239,13 +273,6 @@ if (chatToggle && chatPanel) {
 
     if (fallbackReply === 'I dont know, maybe you should ask a real scientist.' || fallbackReply === 'I dont know, maybe you should ask a real astronaut.') {
       return fallbackReply;
-    }
-
-    const randomWords = ['rocket', 'planet', 'star', 'moon', 'cosmos', 'galaxy', 'mystery', 'carrot', '1'];
-    const randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
-
-    if (fallbackReply === 'I kinda dont wanna' || fallbackReply === 'I dont wanna answer that.' || fallbackReply === 'How should I know?' || fallbackReply === 'I dont know everything' || fallbackReply === 'I dont know, I just know a lot of nothing about space.' || fallbackReply === 'I\'m not quite sure.' || fallbackReply === 'Maybe the real answer is inside you.' || fallbackReply === 'The cake is a lie.' || fallbackReply === 'Give it your rec room best') {
-      return `Uhhhh, I think it's a ${randomWord}.`;
     }
 
     return fallbackReply;
