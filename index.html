@@ -28,6 +28,40 @@
       </main>
     </div>
 
+    <div id="rowen-gpt-widget" class="rowen-gpt-widget">
+      <button
+        id="rowen-gpt-toggle"
+        class="rowen-gpt-toggle"
+        type="button"
+        aria-label="Open Rowen-GPT chat"
+        aria-expanded="false">
+        <span class="rowen-gpt-icon">🤖</span>
+        <span class="rowen-gpt-label">Rowen-GPT</span>
+      </button>
+
+      <div id="rowen-gpt-panel" class="rowen-gpt-panel" aria-live="polite">
+        <div class="rowen-gpt-panel-header">
+          <strong>Rowen-GPT</strong>
+          <button id="rowen-gpt-close" class="rowen-gpt-close" type="button" aria-label="Close chat">×</button>
+        </div>
+
+        <div id="rowen-gpt-messages" class="rowen-gpt-messages">
+          <div class="rowen-gpt-message bot">Hi! I’m Rowen-GPT, your fake space helper.</div>
+          <div class="rowen-gpt-message bot">Ask me about planets, stars, or your next big idea.</div>
+        </div>
+
+        <form id="rowen-gpt-form" class="rowen-gpt-form">
+          <input
+            id="rowen-gpt-input"
+            class="rowen-gpt-input"
+            type="text"
+            placeholder="Type a message..."
+            autocomplete="off" />
+          <button class="rowen-gpt-send" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
     <script type="module" src="./app.js"></script>
   </body>
 </html>
