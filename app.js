@@ -244,7 +244,7 @@ if (chatToggle && chatPanel) {
     const randomWords = ['rocket', 'planet', 'star', 'moon', 'cosmos', 'galaxy', 'mystery', 'carrot', '1'];
     const randomWord = randomWords[Math.floor(Math.random() * randomWords.length)];
 
-    if (fallbackReply === 'I kinda dont wanna' || fallbackReply === 'I dont wanna answer that.' || fallbackReply === 'How should I know?' || fallbackReply === 'I dont know everything' || fallbackReply === 'I dont know, I just know a lot of nothing about space.' || fallbackReply === 'I\'m not quite sure.') {
+    if (fallbackReply === 'I kinda dont wanna' || fallbackReply === 'I dont wanna answer that.' || fallbackReply === 'How should I know?' || fallbackReply === 'I dont know everything' || fallbackReply === 'I dont know, I just know a lot of nothing about space.' || fallbackReply === 'I\'m not quite sure.' || fallbackReply === 'Maybe the real answer is inside you.' || fallbackReply === 'The cake is a lie.' || fallbackReply === 'Give it your rec room best') {
       return `Uhhhh, I think it's a ${randomWord}.`;
     }
 
