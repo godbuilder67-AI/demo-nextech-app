@@ -245,7 +245,7 @@ if (chatToggle && chatPanel) {
       'meow',
       'Google exists for a reason',
       'Thats a solid maybe',
-      ''
+      'you\'ve asked this 87 times, and I still dont know',
     ];
 
     const topicReplies = [];
